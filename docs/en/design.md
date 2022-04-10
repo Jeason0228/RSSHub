@@ -20,7 +20,7 @@ Some tags are rarely used： `Script`, `direction`, `production`, `design-concep
 
 ### User Works
 
-<RouteEn author="MisteryMonster" example="/behance/mishapetrick" path="/behance/:user" :paramsDesc="['username']" radar="1">
+<RouteEn author="MisteryMonster" example="/behance/mishapetrick" path="/behance/:user/:type?" :paramsDesc="['username', 'type, `projects` or `appreciated`, `projects` by default']" radar="1">
 
 Behance user's profile URL, like <https://www.behance.net/mishapetrick> the username will be `mishapetrick`。
 
@@ -57,6 +57,24 @@ Behance user's profile URL, like <https://www.behance.net/mishapetrick> the user
 ### Keyword
 
 <RouteEn path="/dribbble/keyword/:keyword" example="/dribbble/keyword/player" :paramsDesc="['desired keyword']" />
+
+## Google
+
+### Google Fonts
+
+<RouteEn author="Fatpandac" example="/google/fonts/date" path="/google/fonts/:sort?" :paramsDesc="['Sorting type, see below, default to `date`']" selfhost="1">
+
+| Newest | Trending | Most popular | Name  | Number of styles |
+| :----: | :------: | :----------: | :--:  | :--------------: |
+| date   | trending | popularity   | alpha | style            |
+
+::: warning
+
+This route requires API key, therefore it's only available when self-hosting, refer to the [Deploy Guide](https://docs.rsshub.app/en/install/#configuration-route-specific-configurations) for route-specific configurations.
+
+:::
+
+</RouteEn>
 
 ## Inside Design
 
